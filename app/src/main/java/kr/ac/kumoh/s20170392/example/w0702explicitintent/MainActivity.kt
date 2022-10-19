@@ -15,9 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnExplicitIntent.setOnClickListener {
-            val str = binding.editText.text
-            val uri = Uri.parse(this, Expl)
-            val intent = Intent(Intent.ACTION_VIEW, uri)
+            val intent = Intent(this, ImageActivity::class.java)
             startActivity(intent)
         }
 
